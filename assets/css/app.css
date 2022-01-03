@@ -137,11 +137,11 @@ position: relative;
 .cell.bottom {
     align-self: end;
 }
-    .cell img {
+    .cell.decale img {
         margin-left: -50px;
         transform: translateY(30px);
     }
-    .cell figcaption {
+    .cell.decale figcaption {
         margin-left: -50px;
         position: absolute;
         left: 100%;
