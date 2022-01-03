@@ -36,6 +36,7 @@ body {
     }
 
 .g-btn {
+    display:inline-block;
     background-color: transparent;
     color: var(--black);
     position:relative;
@@ -56,10 +57,14 @@ body {
 .arr-link {
     color: var(--gold);
     text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
     .arr-link span{
         color: var(--black);
         text-decoration: underline;
+        font-size:1rem;
+        font-weight: normal;
     }
 
 .ft {
@@ -70,7 +75,9 @@ body {
     color: var(--gold);
 }
 
-
+h1 {
+    font-size: 2rem;
+}
 /* ---------------------------------------------------- NAV */
 
 #main-nav {
@@ -105,3 +112,22 @@ body {
 
 /* ---------------------------------------------------- FIRST SECTION */
 
+#first-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    padding: 20px;
+    gap: 20px;
+}
+    #first-section img {
+        width: 100%;
+        box-shadow: -10px 10px 30px rgba(0,0,0,.2);
+    }
+    #first-section .pics {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+    }
+        #first-section .pics img{
+            height: 100%;
+            object-fit: cover;
+        }
