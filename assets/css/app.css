@@ -6,7 +6,7 @@
 
 :root {
     --black: #232529;
-    --white: #f0e0da;
+    --white: #fdefdf;
     --gold: #b6a179;
 
     --font-body: 'Poppins', sans-serif;
@@ -21,3 +21,58 @@ body {
     color: var(--color-body);
     background-color: var(--background-body);
 }
+
+.btn {
+    display:inline-block;
+    padding: 10px 20px;
+    background-color: var(--black);
+    color: var(--gold);
+    text-decoration: none;
+    transition: background-color .3s, color .3s;
+}
+    .btn:hover {
+        background-color: var(--gold);
+        color: var(--black)
+    }
+
+/* ---------------------------------------------------- NAV */
+
+#main-nav {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    #main-nav a:not(.btn) {
+        text-decoration: none;
+        color: var(--black);
+    }
+    #main-nav .btn {
+        margin-left: 20px;
+    }
+    #main-nav > a {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    #main-nav ul {
+        display:flex;
+        list-style-type: none;
+    }
+        #main-nav .active {
+            position:relative;
+        }
+            #main-nav .active a:before {
+                content: '';
+                position:absolute;
+                background-color: var(--gold);
+                opacity: .2;
+                width: calc(100% - 30px);
+                height:50%;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
+        #main-nav li a {
+            display:block;
+            padding: 10px 20px;
+        }
