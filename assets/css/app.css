@@ -30,15 +30,51 @@ body {
     text-decoration: none;
     transition: background-color .3s, color .3s;
 }
-    .btn:hover {
+    .btn:not(.g-btn):hover {
         background-color: var(--gold);
         color: var(--black)
     }
 
+.g-btn {
+    background-color: transparent;
+    color: var(--black);
+    position:relative;
+    z-index: 1;
+}
+    .g-btn:before {
+        content: '';
+        position:absolute;
+        background-color: var(--gold);
+        opacity: .2;
+        width: calc(100% - 30px);
+        height:50%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+.arr-link {
+    color: var(--gold);
+    text-decoration: none;
+}
+    .arr-link span{
+        color: var(--black);
+        text-decoration: underline;
+    }
+
+.ft {
+    font-family: var(--font-title);
+}
+
+.gt {
+    color: var(--gold);
+}
+
+
 /* ---------------------------------------------------- NAV */
 
 #main-nav {
-    padding: 50px 100px;
+    padding: 50px 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,18 +97,11 @@ body {
         #main-nav .active {
             position:relative;
         }
-            #main-nav .active a:before {
-                content: '';
-                position:absolute;
-                background-color: var(--gold);
-                opacity: .2;
-                width: calc(100% - 30px);
-                height:50%;
-                bottom: 0;
-                left: 0;
-                z-index: -1;
-            }
+            
         #main-nav li a {
             display:block;
             padding: 10px 20px;
         }
+
+/* ---------------------------------------------------- FIRST SECTION */
+
