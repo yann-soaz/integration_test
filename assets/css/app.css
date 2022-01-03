@@ -9,8 +9,8 @@
     --white: #f0e0da;
     --gold: #b6a179;
 
-    --font-body: sans-serif;
-    --font-title: serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-title: 'Prata', serif;
 
     --background-body: var(--white);
     --color-body: var(--black);
