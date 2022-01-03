@@ -41,6 +41,7 @@ body {
     color: var(--black);
     position:relative;
     z-index: 1;
+    transition:font-weight .3s;
 }
     .g-btn:before {
         content: '';
@@ -52,12 +53,21 @@ body {
         bottom: 0;
         left: 0;
         z-index: -1;
+        transition:all .3s;
+    }
+
+    .btn.g-btn:hover:before {
+        transform: translateY(-100%) translateX(30px);
+    }
+    .btn.g-btn:hover {
+        font-weight: bold;
     }
 
 .arr-link {
     color: var(--gold);
     text-decoration: none;
     font-size: 1.3rem;
+    line-height: 1.5rem;
     font-weight: bold;
 }
     .arr-link span{
@@ -65,7 +75,11 @@ body {
         text-decoration: underline;
         font-size:1rem;
         font-weight: normal;
+        transition:padding .3s;
     }
+            .arr-link:hover span{
+                padding-right: 10px;
+            }
 
 .ft {
     font-family: var(--font-title);
@@ -76,7 +90,7 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 /* ---------------------------------------------------- NAV */
 
