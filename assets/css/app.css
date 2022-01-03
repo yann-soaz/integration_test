@@ -6,7 +6,7 @@
 
 :root {
     --black: #232529;
-    --white: #fdefdf;
+    --white: #fffcf9;
     --gold: #b6a179;
 
     --font-body: 'Poppins', sans-serif;
@@ -127,7 +127,28 @@ h1 {
         grid-row: 1 / span 2;
         grid-column: 2;
     }
-        #first-section .pics img{
+        #first-section figure img{
             height: 100%;
             object-fit: cover;
         }
+.cell {
+position: relative;
+}
+.cell.bottom {
+    align-self: end;
+}
+    .cell img {
+        margin-left: -50px;
+    }
+    .cell figcaption {
+        margin-left: -50px;
+        position: absolute;
+        left: 100%;
+        bottom:0;
+        transform-origin: bottom left;
+        transform: rotate(-90deg) translateY(100%);
+        font-weight: bold;
+        display:block;
+        width: fit-content;
+        font-size: .8rem;
+    }
