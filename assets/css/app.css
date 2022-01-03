@@ -139,6 +139,7 @@ position: relative;
 }
     .cell img {
         margin-left: -50px;
+        transform: translateY(30px);
     }
     .cell figcaption {
         margin-left: -50px;
@@ -146,7 +147,7 @@ position: relative;
         left: 100%;
         bottom:0;
         transform-origin: bottom left;
-        transform: rotate(-90deg) translateY(100%);
+        transform: rotate(-90deg) translateY(110%) translateX(-30px);
         font-weight: bold;
         display:block;
         width: fit-content;
