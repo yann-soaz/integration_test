@@ -16,7 +16,7 @@
     --background-body: var(--white);
     --color-body: var(--black);
 
-    --shadow: -10px 10px 30px rgba(0,0,0,.2);
+    --shadow: -10px 10px 50px rgba(0,0,0,.2);
 }
 
 body {
@@ -277,10 +277,17 @@ position: relative;
     }
 
     .cards {
-        padding: 30px 0 50px 10%;
+        padding: 30px 0 100px 10%;
         margin-top: -150px;
+    }
+    .cards-list {
         display:flex;
-        overflow-x: scroll;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;  /* Firefox */
+    }
+    .cards-list::-webkit-scrollbar {
+        display:none; /* Chrome, Edge, Opera */
     }
         .card {
             display:block;
@@ -288,9 +295,12 @@ position: relative;
             background-color: var(--white);
             box-shadow: var(--shadow);
             position:relative;
+            scroll-snap-align: start;
         }
             .card img {
                 vertical-align: middle;
+                width:300px;
+                max-width: 30vw;
             }
             .identity {
                 padding: 0 20px;
