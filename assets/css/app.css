@@ -320,3 +320,13 @@ position: relative;
                 height: 50px;
                 margin-top: -25px;
             }
+
+@media (max-width: 750px) {
+    #slider .bz {
+        width: 85%;
+    }
+        #slider .bz p {
+            grid-column: 1 / span 2
+        }
+    
+}
